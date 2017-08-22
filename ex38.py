@@ -24,3 +24,5 @@ print stuff[-1] # interesting
 print ' '.join(stuff)
 print '#'.join(stuff[3:5])
 
+for items in ten_things:
+    print "Stuff list : %s" % items
