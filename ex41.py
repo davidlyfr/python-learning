@@ -15,9 +15,11 @@ PHRASES = {
 }
 
 # do they want to drill phrases first
-PHASE_First= False
+#PHASE_First= False
 if len(sys.argv) == 2 and sys.argv[1] == "english":
     PHASE_FIRST = True
+else:
+    PHASE_FIRST = False
 
 # load up the words from the website
 for word in urlopen(WORD_URL).readlines():
