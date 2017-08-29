@@ -63,20 +63,37 @@ def convert(snippet, phrase):
 
 # keep going until they hit CTRL-D
 try:
-    while True:
-      print "entering true"
-      snippets = PHRASES.keys()
-      random.shuffle(snippets)
-
-      for snippet in snippets:
-          phrase = PHRASES[snippet]
-          question, answer = convert(snippet, phrase)
-          if PHRASE_FIRST:
-              question, answer = answer, question
-
-              print question
-
-              raw_input("> ")
-              print "ANSWER:  %s\n\n" % answer
+#    while True:
+#      print "entering true"
+#      snippets = PHRASES.keys()
+#      random.shuffle(snippets)
+#
+#      for snippet in snippets:
+#          phrase = PHRASES[snippet]
+#          question, answer = convert(snippet, phrase)
+#          if PHRASE_FIRST:
+#              question, answer = answer, question
+#
+#              print question
+#
+#              raw_input("> ")
+#              print "ANSWER:  %s\n\n" % answer
+    snippets = PHRASES.keys()
+    random.shuffle(snippets)
+    for snippet in snippets:
+        phrase = PHRASES[snippet]
+        question, answer = convert(snippet, phrase)
+        if PHRASE_FIRST == True:
+            print "English question, create syntax"
+            question, answer = answer, question
+            print question
+            raw_input("> ")
+            print "Anser: %s\n\n" % answer
+        else:
+            print "Syntax > write the english equlivant"
+            question, answer = answer, question
+            print answer
+            raw_input("> ")
+            print "Anser: %s\n\n" % question
 except EOFError:
     print "\nBye"
