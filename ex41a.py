@@ -79,7 +79,9 @@ try:
 #              raw_input("> ")
 #              print "ANSWER:  %s\n\n" % answer
     snippets = PHRASES.keys()
+#    print "our list of phrases %s" % snippets
     random.shuffle(snippets)
+#    print "our list of random phrases %s" % snippets
     for snippet in snippets:
         phrase = PHRASES[snippet]
         question, answer = convert(snippet, phrase)
