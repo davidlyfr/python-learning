@@ -6,18 +6,12 @@ WORD_URL = "http://learncodethehardway.org/words.txt"
 WORDS = []
 
 PHRASES = {
-  "class %%%(%%%):":
-    "Make a class named %%% that is-a %%%.",
-  "class %%%(object):\n\tdef __init__(self, ***)" :
-    "class %%% has-a __init__ that takes self and *** parameters.",
-  "class %%%(object):\n\tdef ***(self, @@@)":
-    "class %%% has-a function named *** that takes self and @@@ parameters.",
-  "*** = %%%()":
-    "Set *** to an instance of class %%%.",
-  "***.***(@@@)":
-    "From *** get the *** function, and call it with parameters self, @@@.",
-  "***.*** = '***'":
-    "From *** get the *** attribute and set it to '***'."
+  "class %%%(%%%):" : "Make a class named %%% that is-a %%%.",
+  "class %%%(object):\n\tdef __init__(self, ***)" : "class %%% has-a __init__ that takes self and *** parameters.",
+  "class %%%(object):\n\tdef ***(self, @@@)": "class %%% has-a function named *** that takes self and @@@ parameters.",
+  "*** = %%%()": "Set *** to an instance of class %%%.",
+  "***.***(@@@)": "From *** get the *** function, and call it with parameters self, @@@.",
+  "***.*** = '***'": "From *** get the *** attribute and set it to '***'."
 }
 # do they want to drill phrases first
 if len(sys.argv) == 2 and sys.argv[1] == "english":
@@ -63,20 +57,33 @@ def convert(snippet, phrase):
 
 # keep going until they hit CTRL-D
 try:
-    while True:
-      print "entering true"
-      snippets = PHRASES.keys()
-      random.shuffle(snippets)
+    if (PHRASE_FIRST == True):
+        print "entering true"
+        snippets = PHRASES.keys()
+        random.shuffle(snippets)
 
-      for snippet in snippets:
-          phrase = PHRASES[snippet]
-          question, answer = convert(snippet, phrase)
-          if PHRASE_FIRST:
-              question, answer = answer, question
+        for snippet in snippets:
+            phrase = PHRASES[snippet]
+            question, answer = convert(snippet, phrase)
+            question, answer = answer, question
+            print question
+            raw_input("> ")
+            print " "
+            print "\tANSWER:  %s\n\n" % answer
+#     elif (PHRASE_FIRST == False):
+    else:
+        print "entering false mode"
+        snippets = PHRASES.keys()
+        random.shuffle(snippets)
 
-              print question
+        for snippet in snippets:
+            phrase = PHRASES[snippet]
+            question, answer = convert(snippet, phrase)
+            question, answer = answer, question
+            print answer
+            raw_input("> ")
+            print " "
+            print "\tAnswer: %s\n\n" % question
 
-              raw_input("> ")
-              print "ANSWER:  %s\n\n" % answer
 except EOFError:
     print "\nBye"
