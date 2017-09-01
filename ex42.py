@@ -7,6 +7,7 @@ class Dog(Animal):
     def __init__(self, name):
         ## ??
         self.name = name
+        print name
 
 ## ??
 class Cat(Animal):
@@ -14,7 +15,7 @@ class Cat(Animal):
     def __init__(self, name):
         ## ??
         self.name = name
-
+        print name
 ## ??
 class Person(object):
   
@@ -40,6 +41,11 @@ class Salmon(Fish):
 ## ??
 class Halibut(Fish):
     pass
+
+class Fleetmatics(object):
+    def __init__(self, name):
+        self.name = name
+        print "%s works at Fleetmatics" % name
 
 ## rover is-a Dog
 rover = Dog("Rover")
@@ -67,4 +73,4 @@ crouse = Salmon()
 
 ## ??
 harry = Halibut()
-
+david = Fleetmatics("David")
