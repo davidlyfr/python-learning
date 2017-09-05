@@ -1,4 +1,5 @@
 ## Animal is-a object (yes, sort of confusing) look at the ectra credit
+print ("\n" * 100)
 class Animal(object):
     pass
 ## ??
