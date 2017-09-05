@@ -1,8 +1,0 @@
-hi
-second commit!
-<<<<<<< HEAD
-and the thrid????
-=======
-the changes mad in this branch...
-...only exits in this branch
->>>>>>> second-test
