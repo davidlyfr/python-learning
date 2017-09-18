@@ -11,7 +11,7 @@ Summary of Topics and Code - Cheat Sheet
 
 
 ## Functions
-
+'''
 def myFunction(entry_data):
     books = entry_data * 100
     tapes = books * 2
@@ -23,4 +23,4 @@ pens, paper, folders = myFunction(sum_num)
 print "We have: pens %d, paper %d and folders %d" % (pens, paper, folders)
 print "Or just one - number of pens %d" % pens
 print "We have pens %d, paper %d and folders %d" % myFunction(entry_data)
-   
+'''
