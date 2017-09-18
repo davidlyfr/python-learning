@@ -14,14 +14,14 @@ Summary of Topics and Code - Cheat Sheet
 
 ```
 def myFunction(entry_data):
-    books = entry_data * 100
-    tapes = books * 2
-    bottles = tapes / 6
-    return books, tapes, bottles
+    pens = entry_data * 100
+    paper = pens * 2
+    bottles = paper / 6
+    return pens, paper, bottles
 sum_num = 50
 
-pens, paper, folders = myFunction(sum_num)
-print "We have: pens %d, paper %d and folders %d" % (pens, paper, folders)
+pens, paper, bottles = myFunction(sum_num)
+print "We have: pens %d, paper %d and bottles %d" % (pens, paper, bottles)
 print "Or just one - number of pens %d" % pens
 print "We have pens %d, paper %d and folders %d" % myFunction(entry_data)
 ```
