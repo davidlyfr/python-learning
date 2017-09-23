@@ -4,10 +4,20 @@ Summary of Topics and Code - Cheat Sheet
 
 # Table of Contents
 1. [Comments](#comments)
-2. [Numbers Maths](#numbers_maths)
+2. [Working with Files](#working_with_files)
 3. [Variables Names](#variables names)
 4. [Strings and Text](#strings and text)
 5. [Functions](#functions)
+
+## Working with Files
+
+```
+txt = open(filename) # file is opened and contents are a variable called txt
+print txt.read() # print to screen
+
+new_txt = open(filename, "ab") # append to a file
+new_txt.write(add_to_file)    # add to the file the contents of variable 'add_to_file_
+new_txt.write("\n")           # jump to a new line in the file
 
 
 ## Functions
