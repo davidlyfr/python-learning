@@ -4,7 +4,7 @@ Summary of Topics and Code - Cheat Sheet
 
 # Table of Contents
 1. [Comments](#comments)
-2. [Working with Files](#working_with_files)
+2. [Working with Files](#working with files)
 3. [Variables Names](#variables names)
 4. [Strings and Text](#strings and text)
 5. [Functions](#functions)
@@ -18,7 +18,7 @@ print txt.read() # print to screen
 new_txt = open(filename, "ab") # append to a file
 new_txt.write(add_to_file)    # add to the file the contents of variable 'add_to_file_
 new_txt.write("\n")           # jump to a new line in the file
-
+```
 
 ## Functions
 
