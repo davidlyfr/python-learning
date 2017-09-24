@@ -9,7 +9,7 @@ Summary of Topics and Code - Cheat Sheet
 4. [Strings and Text](#strings-and-text)
 5. [Functions](#functions)
 
-#<a name="working-with-files"></a>Working With Files
+#<a name="working-with-files"></a>
 ## Working with Files
 
 ```
@@ -20,7 +20,7 @@ new_txt = open(filename, "ab") # append to a file
 new_txt.write(add_to_file)    # add to the file the contents of variable 'add_to_file_
 new_txt.write("\n")           # jump to a new line in the file
 ```
-#<a name="functions"></a>Functions
+#<a name="functions"></a>
 ## Functions
 
 ```
