@@ -3,11 +3,11 @@
 Summary of Topics and Code - Cheat Sheet
 
 #### Table of Contents
-[1. [Comments]](#comments)
-[2. [Working with Files]](#working with files)
-[3. [Variables Names]](#variables names)
-[4. [Strings and Text]](#strings and text)
-[5. [Functions]](#functions)
+[Comments](#comments)
+[Working with Files](#working with files)
+[Variables Names](#variables names)
+[Strings and Text](#strings and text)
+[Functions](#functions)
 
 <a name="working with files"/>
 ## Working with Files
