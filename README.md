@@ -2,13 +2,14 @@
 # Code from Book Learn Python the Hardway
 Summary of Topics and Code - Cheat Sheet
 
-# Table of Contents
+#### Table of Contents
 1. [Comments](#comments)
 2. [Working with Files](#Working with Files)
 3. [Variables Names](#variables names)
 4. [Strings and Text](#strings and text)
 5. [Functions](#functions)
 
+<a name="working with files"/>
 ## Working with Files
 
 ```
