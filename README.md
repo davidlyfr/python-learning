@@ -20,6 +20,13 @@ new_txt = open(filename, "ab") # append to a file
 new_txt.write(add_to_file)    # add to the file the contents of variable 'add_to_file_
 new_txt.write("\n")           # jump to a new line in the file
 ```
+```
+def rewind(filename):
+    filename.seek(0)
+def print_a_line(line_count, filename)
+    print line_count, filename.readline()
+
+```
 <a name="functions"></a>
 ## Functions
 
