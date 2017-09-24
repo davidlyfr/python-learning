@@ -4,12 +4,12 @@ Summary of Topics and Code - Cheat Sheet
 
 #### Table of Contents
 [Comments](#comments)
-[Working with Files](#working with files)
+[Working with Files](#working-with-files)
 [Variables Names](#variables names)
 [Strings and Text](#strings and text)
 [Functions](#functions)
 
-<a name="working with files"/>
+#<a name="working-with-files"></a>Working With Files
 ## Working with Files
 
 ```
