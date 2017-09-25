@@ -27,6 +27,11 @@ def print_a_line(line_count, filename)
     print line_count, filename.readline()
 
 ```
+```
+def add(a, b):
+    print "ADDING %d + %d" % (a, b)
+    return a + b
+```
 <a name="functions"></a>
 ## Functions
 
