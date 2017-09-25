@@ -11,7 +11,7 @@ Summary of Topics and Code - Cheat Sheet
 6. [Inputs](#inputs)
 
 <a name="working-with-files"></a>
-## Working with Files
+# Working with Files
 
 ```
 txt = open(filename) # file is opened and contents are a variable called txt
@@ -34,7 +34,7 @@ def add(a, b):
     return a + b
 ```
 <a name="functions"></a>
-## Functions
+# Functions
 
 ```
 def myFunction(entry_data):
@@ -58,7 +58,7 @@ You can define functions to provide the required functionality. Here are simple 
 
 The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.
 
-# Syntax
+## Syntax
 ```
 def functionname( parameters ):
    "function_docstring"
@@ -69,7 +69,7 @@ By default, parameters have a positional behavior and you need to inform them in
 https://www.tutorialspoint.com/python/python_functions.htm
 
 <a name="inputs"></a>
-## Inputs
+# Inputs
 
 ```
 int(raw_input())
