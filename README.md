@@ -8,6 +8,7 @@ Summary of Topics and Code - Cheat Sheet
 3. [Variables Names](#variables-names)
 4. [Strings and Text](#strings-and-text)
 5. [Functions](#functions)
+6. [Inputs](#inputs)
 
 <a name="working-with-files"></a>
 ## Working with Files
@@ -66,3 +67,12 @@ def functionname( parameters ):
    ```
 By default, parameters have a positional behavior and you need to inform them in the same order that they were defined.
 https://www.tutorialspoint.com/python/python_functions.htm
+
+<a name="inputs"></a>
+## Inputs
+
+```
+int(raw_input())
+
+fload(raw_input())
+```
