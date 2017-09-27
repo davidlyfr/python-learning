@@ -4,11 +4,25 @@ Summary of Topics and Code - Cheat Sheet
 
 #### Table of Contents
 1. [Comments](#comments)
+2. [Starting Parameters](#python-start)
 2. [Working with Files](#working-with-files)
 3. [Variables Names](#variables-names)
 4. [Strings and Text](#strings-and-text)
 5. [Functions](#functions)
 6. [Inputs](#inputs)
+
+<a name="python-start"></a>
+# Script Argruments
+When your script needs parameters to run or just information for the user, flags to use etc:
+```
+import sys
+
+if len(sys.argv) != 2:
+    print "\nUsage: csv-reader-03.py <csv file name> "
+    print "\tInfo: For now it can receive 7 rows of data - hard coded"
+    print "\tInfo: The Ip address field is expected to be first column\n"
+    sys.exit(0)
+ ```
 
 <a name="working-with-files"></a>
 # Working with Files
