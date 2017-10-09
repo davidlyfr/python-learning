@@ -10,6 +10,7 @@ Summary of Topics and Code - Cheat Sheet
 4. [Strings and Text](#strings-and-text)
 5. [Functions](#functions)
 6. [Inputs](#inputs)
+7. [Loops - For](#for_loops)
 
 <a name="python-start"></a>
 # Script Argruments
@@ -89,4 +90,17 @@ https://www.tutorialspoint.com/python/python_functions.htm
 int(raw_input())
 
 fload(raw_input())
+```
+
+<a name="for_loops"></a>
+
+# Loops:
+for loops are traditionally used when you have a block of code which you want to repeat a fixed number of times. The Python for statement iterates over the members of a sequence in order, executing the block each time. 
+
+```
+for x in range(0, 3):
+    print "We're on time %d" % (x)
+    
+for number in the_count:
+    print "This is count %d" % number
 ```
