@@ -3,7 +3,7 @@
 Summary of Topics and Code - Cheat Sheet
 
 #### Table of Contents
-1. [Comments](#comments)
+1. [Comments-User Info](#comments)
 2. [Starting Parameters](#python-start)
 2. [Working with Files](#working-with-files)
 3. [Variables Names](#variables-names)
@@ -11,6 +11,36 @@ Summary of Topics and Code - Cheat Sheet
 5. [Functions](#functions)
 6. [Inputs](#inputs)
 7. [Loops - For](#for_loops)
+
+<a name="comments"></a>
+# Comments - User Info
+
+Check on arguments provided by user
+```
+from sys import argv
+import sys
+
+if len(sys.argv) != 2:
+    print "\nUsage: target-ip file or single ip <file name> "
+    print "\tInfo: For now it can receive one ip"
+    print "\tInfo: IPv4 only"
+    sys.exit(0)
+```    
+Or just give them info anyway:
+```
+def usage():
+    print "BHP Net Tool"
+    print
+    print "Usage: bhpnet.py -t target_host -p port"
+    print "-l --listen               - listen on [host]:[port] for"
+    "                                  incoming connections"
+    print "-e --excute=file_to_run   - execute the given file upon"
+    "                                  receiving a connection"
+    print "-c --command              - initialize a command shell"
+    
+usage()
+
+```
 
 <a name="python-start"></a>
 # Script Argruments
