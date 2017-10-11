@@ -11,6 +11,7 @@ Summary of Topics and Code - Cheat Sheet
 5. [Functions](#functions)
 6. [Inputs](#inputs)
 7. [Loops - For](#for_loops)
+8. [String Formatting](#String-Formatting)
 
 <a name="comments"></a>
 # Comments - User Info
@@ -123,6 +124,14 @@ fload(raw_input())
 ```
 
 <a name="for_loops"></a>
+
+<a name="String-Formatting"></a>
+# String Formatting:
+%s - String (or any object with a string representation, like numbers)
+%d - Integers
+%f - Floating point numbers
+%.<number of digits>f - Floating point numbers with a fixed amount of digits to the right of the dot.
+%x/%X - Integers in hex representation (lowercase/uppercase)
 
 # Loops:
 for loops are traditionally used when you have a block of code which you want to repeat a fixed number of times. The Python for statement iterates over the members of a sequence in order, executing the block each time. 
