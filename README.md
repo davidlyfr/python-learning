@@ -104,6 +104,17 @@ You can define functions to provide the required functionality. Here are simple 
 
 The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.
 
+```
+# dict style
+mystuff['apples']
+# module style
+mystuff.apples()
+print mystuff.tangerine
+# class style
+thing = MyStuff()
+thing.apples()
+print thing.tangerine
+```
 ## Syntax
 ```
 def functionname( parameters ):
