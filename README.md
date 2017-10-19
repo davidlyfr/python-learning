@@ -12,6 +12,7 @@ Summary of Topics and Code - Cheat Sheet
 6. [Inputs](#inputs)
 7. [Loops - For](#for_loops)
 8. [String Formatting](#String-Formatting)
+9. [Color](#color)
 
 <a name="comments"></a>
 # Comments - User Info
@@ -154,4 +155,21 @@ for x in range(0, 3):
     
 for number in the_count:
     print "This is count %d" % number
+```
+
+<a name="color"></a>
+# Python Color
+
+```
+from colorama import init, Fore, Back, Style
+init(autoreset=True)
+ 
+print Fore.RED + "FATAL ERROR! Cannot write to /boot/vmlinuz-3.2.0-33-generic"
+print Back.BLUE + Fore.YELLOW + "What a cute console!"
+print "This is an %simportant%s word" % (Style.BRIGHT, Style.NORMAL)
+print Fore.YELLOW  + "Rosetta Code!"
+print Fore.CYAN    + "Rosetta Code!"
+print Fore.GREEN   + "Rosetta Code!"
+print Fore.MAGENTA + "Rosetta Code!"
+print Back.YELLOW + Fore.BLUE + Style.BRIGHT + " " * 40 + " == Good Bye!"
 ```
