@@ -156,7 +156,7 @@ foo.K = Q “From foo get the K attribute, and set it to Q.”
 ```
 int(raw_input())
 
-fload(raw_input())
+float(raw_input())
 ```
 
 <a name="for_loops"></a>
