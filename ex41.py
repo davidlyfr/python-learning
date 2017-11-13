@@ -2,7 +2,7 @@ import random
 from urllib import urlopen
 import sys
 
-WORD_URL = "https://leancodethehardway.org/words.txt"
+WORD_URL = "https://learncodethehardway.org/words.txt"
 WORDS = []
 
 PHRASES = {
@@ -17,9 +17,9 @@ PHRASES = {
 # do they want to drill phrases first
 #PHASE_First= False
 if len(sys.argv) == 2 and sys.argv[1] == "english":
-    PHASE_FIRST = True
+    PHRASE_FIRST = True
 else:
-    PHASE_FIRST = False
+    PHRASE_FIRST = False
 
 # load up the words from the website
 for word in urlopen(WORD_URL).readlines():
