@@ -43,18 +43,19 @@ class CentralCorridor(Scene):
         print "a Gothon jumps out, red scaly skin, dark grimy teeth, and evil clown costume"
         print "flowing around this hate filled body. He's blocking the door to the"
         print "Armory and about to pull a weapon to blast you."
+        print "shoot  -- dodge -- tell a joke"
         
         action = raw_input("> ")
 
-        if action == "shoot!":
+        if action == "shoot":
             print "Quick on the draw you yank out your blaster and fire it at the Gothon."
             print "His clown costurme is flowing and moving around his body, which throws"
             print "off your aim. Your laser hits his costume but misses him entirely. This"
             print "makes him fly into a rage and blast you repeatedly in the face until"
             print "you are dead. Then he eats what remains of your body."
-            print "very dead.
+            print "very dead."
             return 'death'
-        elif action == "dodge!":
+        elif action == "dodge":
             print "Like a world class boxer you dodge, weave, slip and slide right"
             print " as the Gothan's blaster cranks a laser past your head."
             print "In the middle of your artful doge your foot slips and you"
@@ -74,7 +75,7 @@ class CentralCorridor(Scene):
             return 'central_corridor'
 
 
-class LazerWeaponArmory(Scene):
+class LaserWeaponArmory(Scene):
 
     def enter(self):
         print "You do a dive roll into the Weapon Armory, crouch and scan the room"
@@ -83,21 +84,23 @@ class LazerWeaponArmory(Scene):
         print "neutron bomb in its container. There's keypad lock on the box"
         print "wrong 10 times then the lock closes forever and you can't"
         print "get the bomb. The code is 3 digits."
-        code = "%d%d%d" % (randinit(1,9), randint(1,9), randint(1,9))
+        code = "%d%d%d" % (randint(1,9), randint(1,9), randint(1,9))
         hardcoded = 888
         guess = raw_input("[keypad]> ")
         guesses = 0
 
         while guess != code and guesses < 10:
             print "WRONG PIN - Try again"
-            print "Number of tries left %d " % guesses
+            guesses += 1
+            print "(did not see this %s )" % code
+            print "Number of tries left %d " % (10 - guesses)
             guess = raw_input("[Keypad]> ")
 
-        if guess == code or guess == hardcoded
+        if guess == code or guess == 888:
             print "The container clicks open and the seal breaks, letting gas out."
             print "You grab the neutron bomb and run as fast as you can to the "
             print "bridge where you must place it in the right spot."
-            return 'the_bridge"
+            return 'the_bridge'
         else:
             print "The lock buzzes one last time and then you hear a sickening"
             print "melting sound as the mechanism is fused together."
@@ -114,6 +117,7 @@ class TheBridge(Scene):
         print "clown costume than the last. They haven't pulled their"
         print "weapons out yet, as htey see the active bomb under your"
         print "arm and don't want to set it off."
+        print "throw the bomb -- slowly place the bomb"
 
         action = raw_input("> ")
 
@@ -149,17 +153,44 @@ class EscapePod(Scene):
         print "now need to pick one to take. Some of them could be damaged"
         print "but you don't have time to look. There's 5 pods, which one"
         print "do you take?"
+        
 
+        good_pod = randint(1,5)
+        guess = raw_input("[pod #]> ")
+
+        if int(guess) != good_pod:
+            print "You jump into pod %s and hit the eject button." % guess
+            print "The pod escapes out into the void of space, then"
+            print "implodes as the hull ruptures, crushing your body"
+            print "into jam jelly."
+            return 'death'
+        else:
+            print "You jump into pod %s and hit the eject button." % guess
+            print "The pod easily slides out into space heading to"
+            print "the planet below. As it flies to the planet, you look"
+            print "back and see your ship implode then explode like a"
+            print "bright star, taking out the Gothon ship at the same"
+            print "time. You won!!!!"
+
+            return 'finished'
 class Map(object):
 
+    scenes = {
+        'central_corridor': CentralCorridor(),
+        'laser_weapon_armory': LaserWeaponArmory(),
+        'the_bridge': TheBridge(),
+        'escape_pod': EscapePod(),
+        'death': Death()
+    }
+
     def __init__(self, start_scene):
-        pass
+        self.start_scene = start_scene
 
     def next_scene(self, scene_name):
-        pass
+        return Map.scenes.get(scene_name)
 
     def opening_scene(self):
-        pass
+        return self.next_scene(self.start_scene)
 
 a_map = Map('central_corridor')
 a_game = Engine(a_map)

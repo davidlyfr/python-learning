@@ -6,12 +6,12 @@ WORD_URL = "https://learncodethehardway.org/words.txt"
 WORDS = []
 
 PHRASES = {
-    "Class %%%(%%%):": "Make a class neamed %%% that is-a %%%.",
-    "Class %%%(object):\b\tdef __init__(self, ***)" : "Class %%% has-a __init__ that takes self and *** parameters.",
+    "Class %%%(%%%):": "Make a class named %%% that is-a %%%.",
+    "Class %%%(object):\n\tdef __init__(self, ***)" : "Class %%% has-a __init__ that takes self and *** parameters.",
     "Class %%%(object):\n\tdef **(self, @@@)": "Class %%% has-a functino named *** that takes self and @@@ parameters.",
     "*** = %%%()": "Set *** to an instance of class %%%.",
     "***.***(@@@)": "Form *** get the *** function, and call it with parameters self, @@@.",
-    "***.*** = '***'": "From *** get teh *** attribute and set it to '***'."
+    "***.*** = '***'": "From *** get the *** attribute and set it to '***'."
 }
 
 # do they want to drill phrases first
