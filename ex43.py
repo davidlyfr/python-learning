@@ -77,12 +77,54 @@ class CentralCorridor(Scene):
 class LazerWeaponArmory(Scene):
 
     def enter(self):
-        pass
+        print "You do a dive roll into the Weapon Armory, crouch and scan the room"
+        print "for more Gothons that might be hiding. It's dead quiet, too quiet."
+        print "You stand up and run to the far side of the room and find the"
+        print "neutron bomb in its container. There's keypad lock on the box"
+        print "wrong 10 times then the lock closes forever and you can't"
+        print "get the bomb. The code is 3 digits."
+        code = "%d%d%d" % (randinit(1,9), randint(1,9), randint(1,9))
+        hardcoded = 888
+        guess = raw_input("[keypad]> ")
+        guesses = 0
+
+        while guess != code and guesses < 10:
+            print "WRONG PIN - Try again"
+            print "Number of tries left %d " % guesses
+            guess = raw_input("[Keypad]> ")
+
+        if guess == code or guess == hardcoded
+            print "The container clicks open and the seal breaks, letting gas out."
+            print "You grab the neutron bomb and run as fast as you can to the "
+            print "bridge where you must place it in the right spot."
+            return 'the_bridge"
+        else:
+            print "The lock buzzes one last time and then you hear a sickening"
+            print "melting sound as the mechanism is fused together."
+            print "You decide to sit there, and finally the Gothons blow up the"
+            print "ship from their ship and you die."
+            return 'death'
 
 class TheBridge(Scene):
 
     def enter(self):
-        pass
+        print "You burst onto the Bridge with the neutron destruct bomb"
+        print "under your arm and surpise 5 Gothons who are trying to"
+        print "take control of the ship. Each of them has an even uglier"
+        print "clown costume than the last. They haven't pulled their"
+        print "weapons out yet, as htey see the active bomb under your"
+        print "arm and don't want to set it off."
+
+        action = raw_input("> ")
+
+        if action == "throw the bomb":
+            print "In a panic you throw the bomb at the group of Gothons"
+            print "and make a leap for the door. Right as you drop it a"
+            print "Gothon shoots you right in the back killing you."
+            print " As you die you see another Gothon frantically try to disarm"
+            print "the bomb. You did knowing they will probably blow up when "
+            print "it goes off."
+            return 'death'
 
 class EscapePod(Scene):
 
