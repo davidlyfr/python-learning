@@ -125,11 +125,30 @@ class TheBridge(Scene):
             print "the bomb. You did knowing they will probably blow up when "
             print "it goes off."
             return 'death'
+        elif action == "slowly place the bomb":
+            print "You point your blaster at the bomb under your arm"
+            print "and the Gothons put their hands up and start to sweat."
+            print "You inch backward to the door, open it, and then carefully"
+            print "place the bomb on the floor, pointing your blaster at it."
+            print "You then jump back through the door, puch the close button"
+            print "and blast the lock so the Gothons can't get out."
+            print "Now that the bomb is placed you run to the escape pod to"
+            print "get off this tin can."
+            return 'escape_pod'
+        else:
+            print "DOES NOT COMPUTE!"
+            return "the_bridge"
 
 class EscapePod(Scene):
 
     def enter(self):
-        pass
+        print "You rush through the ship desperately trying to make it to"
+        print "the escape pod before the whole ship explodes. It seems like"
+        print "hardly any Gothons are on the ship, so your run is clear of"
+        print "interference. You get to the chamber with the escape pods, and"
+        print "now need to pick one to take. Some of them could be damaged"
+        print "but you don't have time to look. There's 5 pods, which one"
+        print "do you take?"
 
 class Map(object):
 
