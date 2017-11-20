@@ -195,3 +195,9 @@ class Map(object):
 a_map = Map('central_corridor')
 a_game = Engine(a_map)
 a_game.play()
+
+'''
+    from a_game get the play function
+    a_game is an instance of the class Engine
+    
+'''
