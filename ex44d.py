@@ -27,6 +27,12 @@ son = Child()
 
 dad.implicit()
 son.implicit()
-
+print " "
 test = Parent()
 test.my_print()
+print " "
+dad.override()
+son.override()
+print " "
+dad.altered()
+son.altered()
