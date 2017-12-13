@@ -21,24 +21,39 @@ brute force choice - hydra - bree - zenmap
 access denied - accessed 
 
 '''
+from sys import exit
+from random import randint
 
 class Terminal(object):
  
     def enter(self):
-        pass
+        print "This is the opening terminal scene for the hacker - subclass it and implement enter()."
+        exit(1)
 
 class Engine(object):
 
     def __init__(self,term_map):
-        pass
+        self.term_map = term_map
 
     def play(self):
-        pass
+        current_scene = self.term_map.opening_term()
+
+        while True:
+            print "\n-----------"
+            next_scene_name = current_scene.enter()
+            current_scene = self.term_map.next_term(next_scene_name)
 
 class Detected(Terminal):
+    quote = [
+        "You have been detected - IDS/IR are aware of your location..",
+        "Wipe evidence, shutdown and run - detected",
+        "Hope you dont server 25yrs for this - detected",
+        "your foolishness has made you famous."
+        ]
 
     def enter(self):
-        pass
+        print Detected.quote[randint(0, len(self.quote)-1)]
+        exit(1)
 
 class Main_Terminal(Terminal):
 
