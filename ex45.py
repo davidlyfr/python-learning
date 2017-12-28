@@ -25,7 +25,7 @@ from sys import exit
 from random import randint
 
 class Terminal(object):
- 
+
     def enter(self):
         print "This is the opening terminal scene for the hacker - subclass it and implement enter()."
         exit(1)
@@ -66,10 +66,10 @@ class Main_Terminal(Terminal):
         print "you now wear a Black-Hat - hacking a remote pc"
         print "is your objective - lets find it! how?"
         print "what tool do you use to find the target?"
-        print "nmap - Bing - Facebook friend finder"
+        print "nmap - Bing - Facebook (friend finder)"
 
         action = raw_input("> ")
-  
+
         if action == "nmap":
             print "Good decision"
             print " "
@@ -86,13 +86,17 @@ class Main_Terminal(Terminal):
 #            print " "
 #            print "Nmap done: 1 IP address (1 host up) scanned in 5.95 seconds"
             return 'finding_hosts'
-        elif action == "hail mary":
+        elif action == "Bing":
             print "detected"
             return 'detected_death'
-        elif action == "nessus":
+        elif action == "Facebook":
             print "detected"
             return 'detected_death'
-        
+        else:
+            print "Hard stops can be best.....!"
+            print "\nTry another option "
+            print " "
+            return 'main_terminal' 
 
 class FindingHosts(Terminal):
 
@@ -104,7 +108,7 @@ class FindingHosts(Terminal):
         print " sn sN sV "
 
         action = raw_input("> ")
-        
+
         if  action == "sn":
             print "Good decision"
             print " "
@@ -135,7 +139,7 @@ class FindingServices(Terminal):
     def enter(self):
         print "What tool is best for finding services? "
         print "nmap - google - sans"
-        
+
         action = raw_input("> ")
  
         if action == "nmap":
@@ -174,7 +178,24 @@ class BruteForce(Terminal):
         action = raw_input("> ")
 
         if action == "hydra":
-            print "Hydra starting --- winner"
+            print "sudo hydra 192.168.1.70 ssh -l pi -P passwords-bad.txt -s 22 -vV"
+            print "Hydra v8.6 (c) 2017 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes."
+            print " "
+            print "Hydra (http://www.thc.org/thc-hydra) starting at 2017-12-18 15:47:34"
+            print "[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4"
+            print "[DATA] max 16 tasks per 1 server, overall 16 tasks, 500 login tries (l:1/p:500), ~32 tries per task"
+            print "[DATA] attacking ssh://192.168.1.70:22/"
+            print "[VERBOSE] Resolving addresses ... [VERBOSE] resolving done"
+            print "[INFO] Testing if password authentication is supported by ssh://pi@192.168.1.70:22"
+            print "[INFO] Successful, password authentication is supported by ssh://192.168.1.70:22"
+            print "[ATTEMPT] target 192.168.1.70 - login 'pi' - pass '123456' - 1 of 500 [child 0] (0/0)"
+            print "[ATTEMPT] target 192.168.1.70 - login 'pi' - pass 'password' - 2 of 500 [child 1] (0/0)"
+            print "[ATTEMPT] target 192.168.1.70 - login 'pi' - pass '12345678' - 3 of 500 [child 2] (0/0)"
+            print "[ATTEMPT] target 192.168.1.70 - login 'pi' - pass '1234' - 4 of 500 [child 3] (0/0)"
+            print "[22][ssh] host: 127.0.0.1   login: pi   password: 34Ju90"
+            print "[STATUS] attack finished for 192.168.1.70 (waiting for children to complete tests)"
+            print "1 of 1 target successfully completed, 1 valid password found"
+            print "Hydra (http://www.thc.org/thc-hydra) finished at 2017-12-18 15:48:11"
             exit(1)
         elif action == "zenmap":
             print "This tool is a graphical version of nmap - that we just used."
